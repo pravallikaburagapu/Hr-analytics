@@ -1,0 +1,6 @@
+1.active employes = CALCULATE(DISTINCTCOUNT(HR_Analytics[EmpID]),HR_Analytics[Attrition]="No")
+2.attrition rate = DIVIDE(CALCULATE(COUNTROWS(HR_Analytics),HR_Analytics[Attrition]="yes"),COUNTROWS(HR_Analytics))*100
+3.avg monthly income = AVERAGE(HR_Analytics[MonthlyIncome])
+4.AVG YEARS AT COMPANY = CALCULATE(AVERAGE(HR_Analytics[YearsAtCompany]))
+5.high performance count = CALCULATE(COUNTROWS(HR_Analytics),HR_Analytics[PerformanceRating]>=4)
+6.total employes with work life balance = CALCULATE(COUNTROWS(HR_Analytics),not(ISBLANK(HR_Analytics[WorkLifeBalance])))
